@@ -1,4 +1,12 @@
 <resources>
+
+    <!-- notification -->
+    <string name="noticeMe">Lookie Here!!</string>
+    <string name="title">My Notification"</string>
+    <string name="message">This is my message</string>
+
+
+
     <string name="app_name">Student Record Request</string>
     <string-array name="status">
         <item>Alumni</item>
