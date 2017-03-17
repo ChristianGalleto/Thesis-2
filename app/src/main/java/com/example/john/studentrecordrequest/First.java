@@ -16,7 +16,7 @@ public class First extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(3000);
-                    Intent intent = new Intent(getApplicationContext(),LogIn.class);
+                    Intent intent = new Intent(getApplicationContext(),NotificationClass.class);
                     startActivity(intent);
                     finish();
                 } catch (InterruptedException e) {

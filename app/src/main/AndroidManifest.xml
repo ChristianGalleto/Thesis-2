@@ -25,6 +25,9 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".NotificationClass"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".LogIn"
             android:screenOrientation="portrait" />
         <activity
