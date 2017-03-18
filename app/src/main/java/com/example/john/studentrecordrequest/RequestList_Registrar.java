@@ -17,10 +17,20 @@ public class RequestList_Registrar extends AppCompatActivity {
         final Button button19 = (Button) findViewById(R.id.button19);
         final Button button8 = (Button) findViewById(R.id.button8);
 
+        final Intent intent = getIntent();
+        final String firstname = intent.getStringExtra("firstname");
+        final String middlename = intent.getStringExtra("middlename");
+        final  String lastname = intent.getStringExtra("lastname");
+        final String account = intent.getStringExtra("account");
+
         button20.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Intent Pending1Intent = new Intent(RequestList_Registrar.this, Pending_Registrar.class);
+                Pending1Intent.putExtra("firstname", firstname );
+                Pending1Intent.putExtra("middlename", middlename );
+                Pending1Intent.putExtra("lastname", lastname );
+                Pending1Intent.putExtra("account", account );
                 RequestList_Registrar.this.startActivity(Pending1Intent);
             }
         });

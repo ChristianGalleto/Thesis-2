@@ -10,13 +10,15 @@ public class First extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
+
+
         Thread myThread = new Thread(){
 
             @Override
             public void run() {
                 try {
                     sleep(3000);
-                    Intent intent = new Intent(getApplicationContext(),NotificationClass.class);
+                    Intent intent = new Intent(getApplicationContext(), NotificationClass.class);
                     startActivity(intent);
                     finish();
                 } catch (InterruptedException e) {

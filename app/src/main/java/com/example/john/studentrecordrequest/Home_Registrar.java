@@ -27,11 +27,11 @@ public class Home_Registrar extends AppCompatActivity {
         final Button button12 = (Button) findViewById(R.id.button12);
         final TextView display3 = (TextView) findViewById(R.id.textView4);
 
-        Intent intent = getIntent();
-        String firstname = intent.getStringExtra("firstname");
-        String middlename = intent.getStringExtra("middlename");
-        String lastname = intent.getStringExtra("lastname");
-        String account = intent.getStringExtra("account");
+        final Intent intent = getIntent();
+        final String firstname = intent.getStringExtra("firstname");
+        final String middlename = intent.getStringExtra("middlename");
+        final  String lastname = intent.getStringExtra("lastname");
+        final String account = intent.getStringExtra("account");
 
         String registrar = firstname + " " + middlename + " " + lastname + "\n" +  account;
         display3.setText(registrar);
@@ -82,6 +82,10 @@ public class Home_Registrar extends AppCompatActivity {
                         }, 3000);
 
                 Intent RequestListIntent = new Intent(Home_Registrar.this, RequestList_Registrar.class);
+                RequestListIntent.putExtra("firstname", firstname );
+                RequestListIntent.putExtra("middlename", middlename );
+                RequestListIntent.putExtra("lastname", lastname );
+                RequestListIntent.putExtra("account", account );
                 Home_Registrar.this.startActivity(RequestListIntent);
             }
         });  button10.setOnClickListener(new View.OnClickListener(){
